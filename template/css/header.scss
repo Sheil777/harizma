@@ -1,0 +1,158 @@
+.header {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__info {
+  display: flex;
+}
+
+.header__phone, .header__city {
+  display: flex;
+  align-items: center;
+  margin-left: 85px;
+}
+.header__phone {
+  margin-left: 180px;
+}
+
+.header__circle {
+  width: 60px;
+  height: 60px;
+  background: rgb(41, 43, 48);
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__circle img {
+  height: 29px;
+}
+
+.header__number, .header__cityName {
+  //font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+
+  color: black;
+  //color: #FFFFFF;
+
+  margin-left: 17px;
+}
+
+.header__cityName {
+  color: #F69020;
+}
+
+.menu__list {
+  display: flex;
+  list-style: none;
+}
+
+.menu__button {
+  width: 204px;
+  height: 60px;
+
+  box-sizing: border-box;
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__button {
+  //font-family: Muller;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.menu__button_1 {
+
+  background: #FFFFFF;
+  border: 1px solid #393C43;
+  margin-right: 24px;
+}
+
+.menu__button_2 {
+
+  background: #FFFFFF;
+  border: 1px solid black;
+}
+
+
+/* Adaptive */
+
+@media (max-width: 1550px) {
+  .header__phone {
+    margin-left: 0px;
+  }
+
+  .header__city {
+    margin-left: 30px;
+  }
+
+  .menu__button_1 {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header__logo img {
+    width: 200px;
+  }
+
+  .header__circle {
+    height: 40px;
+    width: 40px;
+  }
+
+  .menu__button {
+    height: 50px;
+    width: 155px;
+    font-size: 10px;
+  }
+
+  .header__number, .header__cityName {
+    font-size: 12px;
+  }
+
+  .header__phone {
+    margin-left: 220px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,227 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+b {
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 16px;
+  color: #000;
+  font-family: Muller;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1920px;
+  margin: 0px auto;
+  padding: 0 50px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* Сам прибавляет padding */
+}
+
+._ibg {
+  position: relative;
+}
+
+._ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* ---------------------------------- */
+@font-face {
+  font-family: "Muller";
+  src: url("/template/fonts/MullerRegular.eot");
+  src: url("/template/fonts/MullerRegular.eot") format("embedded-opentype"), url("/template/fonts/MullerRegular.woff2") format("woff2"), url("/template/fonts/MullerRegular.woff") format("woff"), url("/template/fonts/MullerRegular.ttf") format("truetype"), url("/template/fonts/MullerRegular.svg#MullerRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("/template/fonts/MullerBold.eot");
+  src: url("/template/fonts/MullerBold.eot") format("embedded-opentype"), url("/template/fonts/MullerBold.woff2") format("woff2"), url("/template/fonts/MullerBold.woff") format("woff"), url("/template/fonts/MullerBold.ttf") format("truetype"), url("/template/fonts/MullerBold.svg#MullerBold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+.header {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__phone, .header__city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 85px;
+}
+
+.header__phone {
+  margin-left: 180px;
+}
+
+.header__circle {
+  width: 60px;
+  height: 60px;
+  background: #292b30;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__circle img {
+  height: 29px;
+}
+
+.header__number, .header__cityName {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  color: black;
+  margin-left: 17px;
+}
+
+.header__cityName {
+  color: #F69020;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.menu__button {
+  width: 204px;
+  height: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.menu__button_1 {
+  background: #FFFFFF;
+  border: 1px solid #393C43;
+  margin-right: 24px;
+}
+
+.menu__button_2 {
+  background: #FFFFFF;
+  border: 1px solid black;
+}
+
+/* Adaptive */
+@media (max-width: 1550px) {
+  .header__phone {
+    margin-left: 0px;
+  }
+
+  .header__city {
+    margin-left: 30px;
+  }
+
+  .menu__button_1 {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 1300px) {
+  .header__logo img {
+    width: 200px;
+  }
+
+  .header__circle {
+    height: 40px;
+    width: 40px;
+  }
+
+  .menu__button {
+    height: 50px;
+    width: 155px;
+    font-size: 10px;
+  }
+
+  .header__number, .header__cityName {
+    font-size: 12px;
+  }
+
+  .header__phone {
+    margin-left: 220px;
+  }
+}
