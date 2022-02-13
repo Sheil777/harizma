@@ -26,7 +26,9 @@ body {
     line-height: 1;
     font-size: 16px;
     color: #000;
-    font-family: Muller //, 'Tinos'; /* , serif; */
+    font-family: Muller; //, 'Tinos'; /* , serif; */
+
+    background: black;
 }
 
 .wrapper {
@@ -35,7 +37,7 @@ body {
 }
 
 ._container {
-    max-width: 1920px;
+    max-width: 1824px;
     margin: 0px auto;
     padding: 0 50px;
     box-sizing: content-box; /* Сам прибавляет padding */
@@ -84,7 +86,11 @@ body {
 
 @import "header";
 
-
+@media (max-width: 700px) {
+    ._container {
+        padding: 0 3vw;
+    }
+}
 
 
 
