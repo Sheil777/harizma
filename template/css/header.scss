@@ -116,6 +116,23 @@
 }
 
 @media (max-width: 1300px) {
+  .header__container {
+    justify-content: normal;
+
+    .header__info {
+      flex: 1 1 auto;
+      justify-content: flex-end;
+    }
+
+    .header__menu {
+      flex: 0 0 350px;
+    }
+
+    .menu__list {
+      justify-content: flex-end;
+    }
+  }
+
   .header__logo img {
     width: 200px;
   }
@@ -135,9 +152,6 @@
     font-size: 12px;
   }
 
-  .header__phone {
-    margin-left: 220px;
-  }
 }
 
 

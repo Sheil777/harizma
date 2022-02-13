@@ -39,8 +39,7 @@ body {
   max-width: 1920px;
   margin: 0px auto;
   padding: 0 50px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* Сам прибавляет padding */
 }
 
@@ -54,8 +53,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* ---------------------------------- */
@@ -80,27 +78,17 @@ body {
 }
 
 .header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .header__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .header__phone, .header__city {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-left: 85px;
 }
 
@@ -113,15 +101,9 @@ body {
   height: 60px;
   background: #292b30;
   border-radius: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__circle img {
@@ -143,8 +125,6 @@ body {
 }
 
 .menu__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
@@ -152,18 +132,11 @@ body {
 .menu__button {
   width: 204px;
   height: 60px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-radius: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu__button {
@@ -202,6 +175,20 @@ body {
   }
 }
 @media (max-width: 1300px) {
+  .header__container {
+    justify-content: normal;
+  }
+  .header__container .header__info {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+  .header__container .header__menu {
+    flex: 0 0 350px;
+  }
+  .header__container .menu__list {
+    justify-content: flex-end;
+  }
+
   .header__logo img {
     width: 200px;
   }
@@ -220,8 +207,6 @@ body {
   .header__number, .header__cityName {
     font-size: 12px;
   }
-
-  .header__phone {
-    margin-left: 220px;
-  }
 }
+
+/*# sourceMappingURL=style.css.map */
