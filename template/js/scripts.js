@@ -3,7 +3,8 @@ $(document).ready(
         $('.header__burger').click(
             function (event) {
                 $('div.header__burger').toggleClass('header__burger_close');
-                //$('nav.header__menu').toggleClass('header__menu_phone');
+                $('header.header').toggleClass('header_phone');
+                $('div.header__city_phone').toggleClass('header__city_phoneDisable');
             }
         );
     }

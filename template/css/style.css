@@ -93,6 +93,13 @@ body {
   margin-left: 85px;
 }
 
+.header__city_phone {
+  display: none;
+  position: absolute;
+  top: 4.8vw;
+  left: 63vw;
+}
+
 .header__phone {
   margin-left: 180px;
 }
@@ -299,10 +306,17 @@ body {
   }
 
   .header {
-    background: #282B32;
     box-shadow: 0px 12px 27px #000000;
     top: 0;
     padding: 7vw 0;
+    height: 11vw;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+
+  .header_phone {
+    background: #282B32;
+    height: 100%;
   }
 
   .header__container {
@@ -339,6 +353,15 @@ body {
 
   .header__city {
     margin-bottom: 3vw;
+  }
+
+  .header__city_phone {
+    display: block;
+    transition: all 0.5s;
+  }
+
+  .header__city_phoneDisable {
+    display: none;
   }
 
   .header__number, .header__cityName {
