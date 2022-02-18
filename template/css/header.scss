@@ -2,6 +2,8 @@
   position: absolute;
   top: 40px;
   width: 100%;
+
+  z-index: 20;
 }
 
 .header__container {
@@ -160,6 +162,14 @@
 }
 
 /* Adaptive */
+
+/*
+576px
+768px
+992px
+1200px
+1400px
+ */
 
 @media (max-width: 1550px) {
   .header__phone {

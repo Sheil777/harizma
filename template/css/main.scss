@@ -1,0 +1,166 @@
+.main {
+
+  // Времянка
+  height: 800px;
+
+}
+
+.main__background {
+  position: relative;
+
+  .main__background1 {
+    position: absolute;
+    right: 0;
+  }
+
+  .main__background2 {
+    position: absolute;
+    right: 270px;
+  }
+
+  .main__backgroundShadow {
+    position: absolute;
+    right: 0;
+    //border: 1px solid white;
+    height: 800px;
+    width: 1200px;
+
+    box-shadow: 0px 30px 90px 160px rgb(25,27,32) inset;
+  }
+}
+
+
+
+/* Adaptive */
+
+/*
+576px
+768px
+992px
+1200px
+1400px
+ */
+
+@media (max-width: 1399.98px) {
+  .main__background {
+    right: -90px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .main__background {
+    right: -225px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main__background {
+    right: -265px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .main__background {
+    right: -265px;
+  }
+}
+
+/* Adaptive */
+
+.main__container {
+  position: relative;
+  z-index: 20;
+
+  padding-top: 190px;
+}
+
+.main__left {
+  // border: 1px solid white;
+  width: 910px;
+}
+
+.main__header {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 41px;
+  line-height: 82px;
+  /* or 200% */
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.main__text {
+  margin-top: 15px;
+}
+
+.main__text span:first-child {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 94px;
+  /* or 125% */
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+}
+
+.main__textCity {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 25px;
+  margin-left: 25px;
+
+  box-sizing: content-box;
+  padding-top: 5px;
+  padding-left: 15px;
+
+  height: 27-5px;
+  width: 113-15px;
+
+  background: #343A3E;
+  border-radius: 60px;
+
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+
+  color: #FFFFFF;
+}
+
+.main__advantage {
+  display: flex;
+  margin-top: 50px;
+}
+
+.main__item {
+  display: flex;
+  width: 245px;
+  margin-right: 35px;
+}
+
+.mainItem__img {
+
+}
+
+.mainItem__text {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+
+  letter-spacing: 0.03em;
+
+  color: #FFFFFF;
+}

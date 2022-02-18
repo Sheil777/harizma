@@ -28,7 +28,7 @@ body {
     color: #000;
     font-family: Muller; //, 'Tinos'; /* , serif; */
 
-    background: black;
+    background: rgb(25,27,32);
 }
 
 .wrapper {
@@ -83,8 +83,30 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Black'), local('Muller-Black'),
+    url('/template/fonts/MullerBlack.woff2') format('woff2'),
+    url('/template/fonts/MullerBlack.woff') format('woff'),
+    url('/template/fonts/MullerBlack.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Heavy'), local('Muller-Heavy'),
+    url('/template/fonts/MullerHeavy.woff2') format('woff2'),
+    url('/template/fonts/MullerHeavy.woff') format('woff'),
+    url('/template/fonts/MullerHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+*/
 
 @import "header";
+@import "main";
 
 @media (max-width: 700px) {
     ._container {

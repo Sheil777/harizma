@@ -28,7 +28,7 @@ body {
   font-size: 16px;
   color: #000;
   font-family: Muller;
-  background: black;
+  background: #191b20;
 }
 
 .wrapper {
@@ -72,10 +72,28 @@ body {
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: "Muller";
+  src: local("Muller Black"), local("Muller-Black"), url("/template/fonts/MullerBlack.woff2") format("woff2"), url("/template/fonts/MullerBlack.woff") format("woff"), url("/template/fonts/MullerBlack.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+/*
+@font-face {
+    font-family: 'Muller';
+    src: local('Muller Heavy'), local('Muller-Heavy'),
+    url('/template/fonts/MullerHeavy.woff2') format('woff2'),
+    url('/template/fonts/MullerHeavy.woff') format('woff'),
+    url('/template/fonts/MullerHeavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+*/
 .header {
   position: absolute;
   top: 40px;
   width: 100%;
+  z-index: 20;
 }
 
 .header__container {
@@ -218,6 +236,13 @@ body {
 }
 
 /* Adaptive */
+/*
+576px
+768px
+992px
+1200px
+1400px
+ */
 @media (max-width: 1550px) {
   .header__phone {
     margin-left: 0px;
@@ -381,6 +406,139 @@ body {
     margin-bottom: 5vw;
   }
 }
+.main {
+  height: 800px;
+}
+
+.main__background {
+  position: relative;
+}
+.main__background .main__background1 {
+  position: absolute;
+  right: 0;
+}
+.main__background .main__background2 {
+  position: absolute;
+  right: 270px;
+}
+.main__background .main__backgroundShadow {
+  position: absolute;
+  right: 0;
+  height: 800px;
+  width: 1200px;
+  box-shadow: 0px 30px 90px 160px #191b20 inset;
+}
+
+/* Adaptive */
+/*
+576px
+768px
+992px
+1200px
+1400px
+ */
+@media (max-width: 1399.98px) {
+  .main__background {
+    right: -90px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .main__background {
+    right: -225px;
+  }
+}
+@media (max-width: 991.98px) {
+  .main__background {
+    right: -265px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main__background {
+    right: -265px;
+  }
+}
+/* Adaptive */
+.main__container {
+  position: relative;
+  z-index: 20;
+  padding-top: 190px;
+}
+
+.main__left {
+  width: 910px;
+}
+
+.main__header {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 41px;
+  line-height: 82px;
+  /* or 200% */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.main__text {
+  margin-top: 15px;
+}
+
+.main__text span:first-child {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 94px;
+  /* or 125% */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.main__textCity {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 25px;
+  margin-left: 25px;
+  box-sizing: content-box;
+  padding-top: 5px;
+  padding-left: 15px;
+  height: 22px;
+  width: 98px;
+  background: #343A3E;
+  border-radius: 60px;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
+.main__advantage {
+  display: flex;
+  margin-top: 50px;
+}
+
+.main__item {
+  display: flex;
+  width: 245px;
+  margin-right: 35px;
+}
+
+.mainItem__text {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+
 @media (max-width: 700px) {
   ._container {
     padding: 0 3vw;
