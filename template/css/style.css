@@ -324,6 +324,8 @@ body {
   }
   .header__container .header__logo {
     margin-bottom: 8vw;
+    display: block;
+    width: 45vw;
   }
   .header__container .header__logo img {
     width: 45vw;
