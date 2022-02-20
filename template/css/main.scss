@@ -1,8 +1,9 @@
+$mainHeight: 800px;
+
 .main {
 
   // Времянка
-  height: 800px;
-
+  height: $mainHeight;
 }
 
 .main__background {
@@ -39,13 +40,34 @@
 992px
 1200px
 1400px
+1850px - мой
  */
 
-@media (max-width: 1399.98px) {
+@media (max-width: 1850px) {
   .main__background {
-    right: -90px;
+    right: -120px;
+  }
+
+  .main__label {
+    right: 550px !important;
   }
 }
+
+@media (max-width: 1600px) {
+  .main__background {
+    right: -240px;
+  }
+
+  .main__label {
+    right: 550px - 120px !important;
+  }
+}
+//
+//@media (max-width: 1399.98px) {
+//  .main__background {
+//    right: -150px;
+//  }
+//}
 
 @media (max-width: 1199.98px) {
   .main__background {
@@ -72,6 +94,8 @@
   z-index: 20;
 
   padding-top: 190px;
+
+  height: $mainHeight - 190px;
 }
 
 .main__left {
@@ -144,12 +168,12 @@
 
 .main__item {
   display: flex;
-  width: 245px;
-  margin-right: 35px;
+  // width: 245px;
+  margin-right: 50px;
 }
 
 .mainItem__img {
-
+  margin-right: 10px;
 }
 
 .mainItem__text {
@@ -164,3 +188,116 @@
 
   color: #FFFFFF;
 }
+
+.main__button {
+  margin-top: 75px;
+}
+
+.main-feedback {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // background: white;
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  height: 300px;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 85px;
+
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(217.04deg, #FFC619 21.5%, #F69020 48.98%, #EC5128 80.77%);
+    border-radius: 50%;
+  }
+
+  &__text {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 9px;
+    line-height: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: #F69020;
+
+    transform: rotate(-90deg);
+  }
+}
+
+.main__label {
+  position: absolute;
+  right: 670px;
+  top: 480px;
+}
+
+/* Adaptive */
+/*
+576px
+768px
+992px
+1200px
+1400px
+1850px - мой
+ */
+
+
+$percent1700: 75; // Процент для меньше 1700
+
+@media (max-width: 1700px) {
+  .main__header {
+    font-size: 41px * $percent1700 / 100;
+  }
+
+  .main__text span:first-child {
+    font-size: 75px * $percent1700 / 100;
+    line-height: 94px * $percent1700 / 100;
+  }
+
+  .main__item {
+    margin-right: 50px * $percent1700 / 100;
+  }
+
+  .mainItem__text {
+    font-size: 18px * $percent1700 / 100;
+  }
+
+  .main__textCity {
+    margin-top: 25px * $percent1700 / 100;
+    margin-left: 25px * $percent1700 / 100
+  }
+}
+
+$percent1400: 50; // Процент для меньше 1400
+
+@media (max-width: 1400px) {
+  .main__header {
+    font-size: 41px * $percent1400 / 100;
+  }
+
+  .main__text span:first-child {
+    font-size: 75px * $percent1400 / 100;
+    line-height: 94px * $percent1400 / 100;
+  }
+
+  .main__item {
+    margin-right: 50px * $percent1400 / 100;
+  }
+
+  .mainItem__text {
+    font-size: 18px * $percent1400 / 100;
+  }
+
+  .main__textCity {
+    margin-top: 25px * $percent1400 / 100;
+    margin-left: 25px * $percent1400 / 100
+  }
+}
+

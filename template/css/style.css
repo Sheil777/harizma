@@ -89,6 +89,24 @@ body {
     font-style: normal;
 }
 */
+.buttonGold {
+  width: 280px;
+  height: 70px;
+  background: linear-gradient(93.25deg, #EA422A 0%, #F69020 48.58%, #FFC619 101.38%);
+  border-radius: 60px;
+  font-family: Muller;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #252121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   position: absolute;
   top: 40px;
@@ -256,7 +274,7 @@ body {
     margin-right: 10px;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .header__container {
     justify-content: normal;
   }
@@ -331,7 +349,6 @@ body {
   }
 
   .header {
-    box-shadow: 0px 12px 27px #000000;
     top: 0;
     padding: 7vw 0;
     height: 11vw;
@@ -340,6 +357,7 @@ body {
   }
 
   .header_phone {
+    box-shadow: 0px 12px 27px #000000;
     background: #282B32;
     height: 100%;
   }
@@ -384,7 +402,6 @@ body {
 
   .header__city_phone {
     display: block;
-    transition: all 0.5s;
   }
 
   .header__city_phoneDisable {
@@ -404,6 +421,36 @@ body {
 
   .menu__button_1 {
     margin-bottom: 5vw;
+  }
+}
+/* Phone */
+@media (max-width: 700px) {
+  .main__background {
+    top: 40vw;
+    right: -62vw !important;
+  }
+
+  .main__container {
+    display: none;
+  }
+
+  .header_phone {
+    height: 95vw;
+  }
+
+  .main__backgroundShadow {
+    display: none;
+  }
+
+  .main__background1 {
+    right: -33vw !important;
+    width: 441vw;
+    top: -65vw;
+  }
+
+  .main__background2 {
+    right: 43vw !important;
+    width: 90vw;
   }
 }
 .main {
@@ -436,10 +483,24 @@ body {
 992px
 1200px
 1400px
+1850px - мой
  */
-@media (max-width: 1399.98px) {
+@media (max-width: 1850px) {
   .main__background {
-    right: -90px;
+    right: -120px;
+  }
+
+  .main__label {
+    right: 550px !important;
+  }
+}
+@media (max-width: 1600px) {
+  .main__background {
+    right: -240px;
+  }
+
+  .main__label {
+    right: 430px !important;
   }
 }
 @media (max-width: 1199.98px) {
@@ -462,6 +523,7 @@ body {
   position: relative;
   z-index: 20;
   padding-top: 190px;
+  height: 610px;
 }
 
 .main__left {
@@ -524,8 +586,11 @@ body {
 
 .main__item {
   display: flex;
-  width: 245px;
-  margin-right: 35px;
+  margin-right: 50px;
+}
+
+.mainItem__img {
+  margin-right: 10px;
 }
 
 .mainItem__text {
@@ -539,6 +604,102 @@ body {
   color: #FFFFFF;
 }
 
+.main__button {
+  margin-top: 75px;
+}
+
+.main-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  height: 300px;
+}
+.main-feedback__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 85px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(217.04deg, #FFC619 21.5%, #F69020 48.98%, #EC5128 80.77%);
+  border-radius: 50%;
+}
+.main-feedback__text {
+  font-family: Muller;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 9px;
+  line-height: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F69020;
+  transform: rotate(-90deg);
+}
+
+.main__label {
+  position: absolute;
+  right: 670px;
+  top: 480px;
+}
+
+/* Adaptive */
+/*
+576px
+768px
+992px
+1200px
+1400px
+1850px - мой
+ */
+@media (max-width: 1700px) {
+  .main__header {
+    font-size: 30.75px;
+  }
+
+  .main__text span:first-child {
+    font-size: 56.25px;
+    line-height: 70.5px;
+  }
+
+  .main__item {
+    margin-right: 37.5px;
+  }
+
+  .mainItem__text {
+    font-size: 13.5px;
+  }
+
+  .main__textCity {
+    margin-top: 18.75px;
+    margin-left: 18.75px;
+  }
+}
+@media (max-width: 1400px) {
+  .main__header {
+    font-size: 20.5px;
+  }
+
+  .main__text span:first-child {
+    font-size: 37.5px;
+    line-height: 47px;
+  }
+
+  .main__item {
+    margin-right: 25px;
+  }
+
+  .mainItem__text {
+    font-size: 9px;
+  }
+
+  .main__textCity {
+    margin-top: 12.5px;
+    margin-left: 12.5px;
+  }
+}
 @media (max-width: 700px) {
   ._container {
     padding: 0 3vw;
