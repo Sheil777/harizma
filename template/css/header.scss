@@ -276,12 +276,15 @@
     overflow: hidden;
 
     transition: all 0.5s;
+
   }
 
   .header_phone {
     box-shadow: 0px 12px 27px #000000;
     background: #282B32;
     height: 100%;
+    position: fixed;
+    z-index: 30;
   }
 
   .header__container {
@@ -361,41 +364,6 @@
   }
 }
 
-
-
-/* Phone */
-
-@media (max-width: 700px) {
-  .main__background {
-    top: 40vw;
-    right: -62vw !important;
-  }
-
-  .main__container {
-    display: none;
-  }
-
-  .header_phone {
-    height: 95vw;
-  }
-
-  .main__backgroundShadow {
-    display: none;
-  }
-
-  // Фон
-  .main__background1 {
-    right: -33vw !important;
-    width: 441vw;
-    top: -65vw;
-  }
-
-  // Девка
-  .main__background2 {
-    right: 43vw !important;
-    width: 90vw;
-  }
-}
 
 
 
