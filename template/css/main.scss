@@ -4,6 +4,7 @@ $mainHeight: 800px;
 
   // Времянка
   height: $mainHeight;
+  overflow: hidden;
 }
 
 .main__background {
@@ -124,7 +125,6 @@ $mainHeight: 800px;
 }
 
 .main__header {
-  font-family: Muller;
   font-style: normal;
   font-weight: normal;
   font-size: 41px;
@@ -142,7 +142,6 @@ $mainHeight: 800px;
 }
 
 .main__text span:first-child {
-  font-family: Muller;
   font-style: normal;
   font-weight: 900;
   font-size: 75px;
@@ -171,7 +170,6 @@ $mainHeight: 800px;
   background: #343A3E;
   border-radius: 60px;
 
-  font-family: Muller;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -197,7 +195,6 @@ $mainHeight: 800px;
 }
 
 .mainItem__text {
-  font-family: Muller;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -238,7 +235,6 @@ $mainHeight: 800px;
   }
 
   &__text {
-    font-family: Muller;
     font-style: normal;
     font-weight: bold;
     font-size: 9px;

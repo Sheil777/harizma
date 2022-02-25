@@ -26,7 +26,7 @@ body {
     line-height: 1;
     font-size: 16px;
     color: #000;
-    font-family: Muller; //, 'Tinos'; /* , serif; */
+    font-family: Muller, Arial; //, 'Tinos'; /* , serif; */
 
     background: rgb(25,27,32);
 }
@@ -130,6 +130,7 @@ body {
 
 @import "header";
 @import "main";
+@import "advantages";
 
 @media (max-width: 700px) {
     ._container {
