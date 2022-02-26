@@ -735,7 +735,7 @@ body {
 /* Phone */
 @media (max-width: 700px) {
   .main {
-    height: 200vw;
+    height: 218vw;
   }
 
   .main__background {
@@ -820,7 +820,7 @@ body {
 
   .main__button {
     width: 65vw;
-    height: 16vw;
+    height: 14vw;
     font-size: 3.5vw;
     margin-top: 43vw;
   }
@@ -836,7 +836,6 @@ body {
 .main-advantages__item {
   display: flex;
   flex: 0 1 25%;
-  border: 1px solid white;
   height: 130px;
   justify-content: center;
   align-items: center;
@@ -860,14 +859,50 @@ body {
   color: #FFFFFF;
 }
 
-main-advantage-item__text::before {
-  display: block;
-  content: "";
+.main-advantage-item__hyphen {
   width: 34px;
-  height: 1px;
+  height: 2px;
+  margin-left: 18px;
+  margin-right: 37px;
   background-color: rgba(255, 198, 25, 0.3);
 }
 
+@media (max-width: 1500px) {
+  .main-advantages__container {
+    flex-wrap: wrap;
+  }
+
+  .main-advantages__item {
+    flex: 0 1 50%;
+  }
+
+  .main-advantage-item:nth-child(3) {
+    order: 4;
+  }
+
+  .main-advantage-item:nth-child(4) {
+    order: 3;
+  }
+}
+@media (max-width: 700px) {
+  .main-advantage-item {
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 3vw 4vw;
+    box-sizing: border-box;
+    height: 29vw;
+  }
+
+  .main-advantage-item__img {
+    width: 10vw;
+  }
+
+  .main-advantage-item__text {
+    flex: 1 100%;
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+}
 @media (max-width: 700px) {
   ._container {
     padding: 0 3vw;
