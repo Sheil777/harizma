@@ -111,7 +111,7 @@ body {
   position: absolute;
   top: 40px;
   width: 100%;
-  z-index: 20;
+  z-index: 50;
 }
 
 .header__container {
@@ -366,6 +366,10 @@ body {
     height: 100%;
     position: fixed;
     z-index: 30;
+  }
+
+  .header_phone {
+    height: 95vw;
   }
 
   .header__container {
@@ -775,10 +779,6 @@ body {
     width: 30vw;
     height: 7vw;
     font-size: 4vw;
-  }
-
-  .header_phone {
-    height: 95vw;
   }
 
   .main__backgroundShadow {
