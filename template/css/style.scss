@@ -60,12 +60,12 @@ body {
 /* ---------------------------------- */
 @font-face {
     font-family: 'Muller';
-    src: url('/template/fonts/MullerRegular.eot');
-    src: url('/template/fonts/MullerRegular.eot') format('embedded-opentype'),
-    url('/template/fonts/MullerRegular.woff2') format('woff2'),
-    url('/template/fonts/MullerRegular.woff') format('woff'),
-    url('/template/fonts/MullerRegular.ttf') format('truetype'),
-    url('/template/fonts/MullerRegular.svg#MullerRegular') format('svg');
+    src: url('../fonts/MullerRegular.eot');
+    src: url('../fonts/MullerRegular.eot') format('embedded-opentype'),
+    url('../fonts/MullerRegular.woff2') format('woff2'),
+    url('../fonts/MullerRegular.woff') format('woff'),
+    url('../fonts/MullerRegular.ttf') format('truetype'),
+    url('../fonts/MullerRegular.svg#MullerRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -73,12 +73,12 @@ body {
 
 @font-face {
     font-family: 'Muller';
-    src: url('/template/fonts/MullerBold.eot');
-    src: url('/template/fonts/MullerBold.eot') format('embedded-opentype'),
-    url('/template/fonts/MullerBold.woff2') format('woff2'),
-    url('/template/fonts/MullerBold.woff') format('woff'),
-    url('/template/fonts/MullerBold.ttf') format('truetype'),
-    url('/template/fonts/MullerBold.svg#MullerBold') format('svg');
+    src: url('../fonts/MullerBold.eot');
+    src: url('../fonts/MullerBold.eot') format('embedded-opentype'),
+    url('../fonts/MullerBold.woff2') format('woff2'),
+    url('../fonts/MullerBold.woff') format('woff'),
+    url('../fonts/MullerBold.ttf') format('truetype'),
+    url('../fonts/MullerBold.svg#MullerBold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
@@ -86,9 +86,9 @@ body {
 @font-face {
     font-family: 'Muller';
     src: local('Muller Black'), local('Muller-Black'),
-    url('/template/fonts/MullerBlack.woff2') format('woff2'),
-    url('/template/fonts/MullerBlack.woff') format('woff'),
-    url('/template/fonts/MullerBlack.ttf') format('truetype');
+    url('../fonts/MullerBlack.woff2') format('woff2'),
+    url('../fonts/MullerBlack.woff') format('woff'),
+    url('../fonts/MullerBlack.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
