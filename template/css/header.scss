@@ -47,11 +47,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .header__circle img {
   height: 29px;
 }
+
+
 
 .header__number, .header__cityName {
   //font-family: Muller;
@@ -73,6 +79,54 @@
 
 .header__cityName {
   color: #F69020;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header__city {
+  position: relative;
+}
+
+.header__circle {
+  z-index: 10;
+}
+
+.header-city-list {
+  height: 0;
+  position: absolute;
+  left: -10px;
+  top: -5px;
+  width: 150%;
+  overflow: hidden;
+  border-radius: 5%;
+  background: #282B32;
+
+  transition: height 0.5s;
+
+
+  &.active {
+    height: 165px;
+  }
+
+  &__item {
+    color: white;
+
+    padding: 15px 0;
+    padding-left: 5px;
+    margin-left: 82px;
+    margin-right: 20px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.07);
+    }
+
+    &:first-child {
+      margin-top: 15px;
+    }
+  }
 }
 
 .menu__list {
@@ -180,6 +234,12 @@
 1200px
 1400px
  */
+
+@media (min-width: 1551px) {
+  .header__block {
+    margin-left: 130px;
+  }
+}
 
 @media (max-width: 1550px) {
   .header__phone {
