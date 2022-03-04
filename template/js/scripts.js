@@ -43,6 +43,14 @@ $(document).ready(
         $('.header__cityName, .header__circle, .header-city-list__item').click(
             function (event) {
                 $('.header-city-list').toggleClass('active');
+                $('.close-city-list').toggleClass('active');
+            }
+        );
+
+        $('.close-city-list').click(
+            function (event) {
+                $('.header-city-list').toggleClass('active');
+                $('.close-city-list').toggleClass('active');
             }
         );
 

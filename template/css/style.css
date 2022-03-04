@@ -189,7 +189,7 @@ body {
 }
 
 .header__circle {
-  z-index: 10;
+  z-index: 32;
 }
 
 .header-city-list {
@@ -202,6 +202,7 @@ body {
   border-radius: 5%;
   background: #282B32;
   transition: height 0.5s;
+  z-index: 31;
 }
 .header-city-list.active {
   height: 165px;
@@ -219,6 +220,20 @@ body {
 }
 .header-city-list__item:first-child {
   margin-top: 15px;
+}
+
+.close-city-list {
+  display: none;
+}
+
+.close-city-list.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 30;
 }
 
 .menu__list {
