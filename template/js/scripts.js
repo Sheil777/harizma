@@ -39,8 +39,15 @@ $(document).ready(
                 $('body').toggleClass('lock');
             }
         );
-
+/*
         $('.header__cityName, .header__circle, .header-city-list__item').click(
+            function (event) {
+                $('.header-city-list').toggleClass('active');
+                $('.close-city-list').toggleClass('active');
+            }
+        );
+*/
+        $('.header__city').hover(
             function (event) {
                 $('.header-city-list').toggleClass('active');
                 $('.close-city-list').toggleClass('active');
@@ -62,7 +69,7 @@ $(document).ready(
         editNameCity($.cookie('city'));
         editColorCityByName($.cookie('city'));
 
-        $('.header-city-list').click(
+        $('.header-city-list__item').click(
             function (event) {
                 var el = event.target;
                 var city = el.textContent;

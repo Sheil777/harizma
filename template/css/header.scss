@@ -79,6 +79,7 @@
 
 .header__cityName {
   color: #F69020;
+  width: 125px;
 
   &:hover {
     cursor: pointer;
@@ -98,7 +99,7 @@
   position: absolute;
   left: -10px;
   top: -5px;
-  width: 150%;
+  width: 120%; //150%;
   overflow: hidden;
   border-radius: 5%;
   background: #282B32;
@@ -117,6 +118,7 @@
     padding-left: 5px;
     margin-left: 82px;
     margin-right: 20px;
+
 
     &:hover {
       cursor: pointer;
@@ -306,9 +308,42 @@
     font-size: 12px;
   }
 
+  .header-city-list {
+
+    width: 115%;
+
+
+    &__item {
+      font-size: 12px;
+      margin-left: 63px;
+      letter-spacing: 0.03em;
+
+      &:first-child {
+        margin-top: 10px;
+      }
+    }
+
+    &.active {
+      height: 145px;
+    }
+  }
+
+  .header__cityName {
+    width: 110px;
+  }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1060px) {
+  .header-city-list {
+
+    &__item {
+
+      &:first-child {
+        margin-top: 6px;
+      }
+    }
+  }
+
   .header__menu {
     display: flex;
     flex: 0 0 170px !important;
@@ -332,7 +367,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 860px) {
   .header__info {
     justify-content: start !important;
     align-items: flex-end;
@@ -421,6 +456,10 @@
     .header__phone, .header__city {
       width: auto;
     }
+  }
+
+  .header__cityName {
+    width: auto;
   }
 
   .header__container {
