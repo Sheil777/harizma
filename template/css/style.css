@@ -57,6 +57,10 @@ body {
   object-fit: cover;
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 /* ---------------------------------- */
 @font-face {
   font-family: "Muller";
@@ -444,10 +448,6 @@ body {
   }
 }
 @media (max-width: 700px) {
-  body.lock {
-    overflow: hidden;
-  }
-
   .header__burger {
     display: block;
   }
@@ -1037,6 +1037,98 @@ body {
     line-height: 6vw;
   }
 }
+.popup-reserve {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.8s;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.popup-reserve.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-reserve.open .popup-reserve__content {
+  opacity: 1;
+  transform: perspective(400px) translate(0px, 0px) rotateX(0deg);
+}
+.popup-reserve__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
+.popup-reserve__content {
+  background: #141414;
+  color: white;
+  max-width: 300px;
+  padding: 30px;
+  border: 6px solid #F69020;
+  box-shadow: 0 0 13px 5px rgba(246, 144, 32, 0.6);
+  position: relative;
+  transition: 0.8s;
+  opacity: 0;
+  transform: perspective(400px) translate(0px, -120%) rotateX(45deg);
+}
+.popup-reserve__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.popup-reserve__close div {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.popup-reserve__close div:after, .popup-reserve__close div:before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #F69020;
+}
+.popup-reserve__close div:after {
+  transform: rotate(-45deg);
+}
+.popup-reserve__close div:before {
+  transform: rotate(45deg);
+}
+.popup-reserve__title {
+  font-size: 60px;
+  line-height: 45px;
+}
+.popup-reserve__text {
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 25px;
+}
+.popup-reserve__form {
+  margin-top: 30px;
+}
+.popup-reserve__phone {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.popup-reserve__button {
+  margin-top: 30px;
+  width: 100%;
+}
+
 @media (max-width: 700px) {
   ._container {
     padding: 0 3vw;

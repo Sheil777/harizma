@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__container _container">
+            <div class="header__container _container lock-padding">
                 <a href="" class="header__logo">
                     <img src="template/img/header/logo.png" alt="Logo">
                 </a>
@@ -47,7 +47,7 @@
                             <a href="#" class="menu__button menu__button_1">Наши залы</a>
                         </li>
                         <li class="menu__item">
-                            <a href="#" class="menu__button menu__button_2">Забронировать</a>
+                            <a href="#popup-reserve" class="menu__button menu__button_2 popup-link">Забронировать</a>
                         </li>
                     </ul>
                 </nav>
@@ -128,8 +128,25 @@
 
         <div class="close-city-list"></div>
     </div>
+
+    <div id="popup-reserve" class="popup-reserve popup">
+        <div class="popup-reserve__body">
+            <div class="popup-reserve__content popup__content">
+                <a href="" class="popup-reserve__close popup-close"><div></div></a>
+                <div class="popup-reserve__title">1 час в подарок</div>
+                <div class="popup-reserve__text">Дарим 1 час при бронировании зала <br /> от 4х часов</div>
+                <div class="popup-reserve__form">
+                    <input type="text" class="popup-reserve__phone" placeholder="Ваш телефон"/>
+                    <input type="submit" class="popup-reserve__button buttonGold" value="Забронировать" />
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="template/js/jquery-3.6.0.min.js"></script>
     <script src="template/js/jquery.cookie.js"></script>
+    <script src="template/js/jquery.maskedinput.min.js"></script>
     <script src="template/js/scripts.js"></script>
+    <script src="template/js/popups.js"></script>
 </body>
 </html>

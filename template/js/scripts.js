@@ -80,5 +80,9 @@ $(document).ready(
                 editColorCities(el);
             }
         );
+
+
+        // Маска для номера телефона
+        $('.popup-reserve__phone').mask("+7 (999) 99-99-999");
     }
 );
