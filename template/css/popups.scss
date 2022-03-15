@@ -112,4 +112,16 @@
   }
 }
 
+@media (max-width: 700px) {
+  .popup-reserve {
 
+    &__body {
+      padding: 0 5vw;
+    }
+
+    &__content {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}
