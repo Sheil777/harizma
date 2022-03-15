@@ -90,6 +90,19 @@
   position: relative;
 }
 
+@media (min-width: 700px) {
+  .header__city {
+    .header__circle img {
+      transform: rotateY(0deg);
+      transition: 0.8s;
+    }
+
+    &:hover .header__circle img {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
 .header__circle {
   z-index: 32;
 }
@@ -128,6 +141,29 @@
     &:first-child {
       margin-top: 15px;
     }
+  }
+}
+
+//  .active_phone
+.header-city-list.active_phone{
+  position: fixed;
+  left: 0;
+  top: 30%;
+  transform: translateY(-30%);
+  width: 94%;
+  height: 45vw;
+  margin-left: 3%;
+
+  .header-city-list__item {
+    margin: 0;
+    font-size: 7vw;
+    text-align: center;
+    padding: 4vw 0;
+    border-bottom: 1px solid #343A3E;
+  }
+
+  .header-city-list__item:last-child {
+    border-bottom: 0;
   }
 }
 

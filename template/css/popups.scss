@@ -122,6 +122,35 @@
     &__content {
       max-width: none;
       width: 100%;
+      padding: 8vw;
+    }
+
+    &__title {
+      font-size: 15vw;
+      line-height: 12vw;
+    }
+
+    &__text {
+      margin-top: 7vw;
+      font-size: 5vw;
+      line-height: 7vw;
+    }
+
+    &__form {
+      margin-top: 8vw;
+    }
+
+    &__phone {
+      height: 13vw;
+      font-size: 5vw;
+      padding-left: 4vw;
+      border-radius: 2vw;
+    }
+
+    &__button {
+      height: 16vw;
+      font-size: 3.5vw;
+      margin-top: 6vw;
     }
   }
 }

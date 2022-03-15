@@ -49,15 +49,28 @@ $(document).ready(
 */
         $('.header__city').hover(
             function (event) {
-                $('.header-city-list').toggleClass('active');
-                $('.close-city-list').toggleClass('active');
+                if(document.querySelector(".wrapper").offsetWidth > 700)
+                    $('.header-city-list').toggleClass('active');
+
+                //$('.close-city-list').toggleClass('active');
+            }
+        );
+
+        $('.header__city_phone').click(
+            function (event) {
+                if(document.querySelector(".wrapper").offsetWidth <= 700) {
+                    $('.header-city-list').toggleClass('active_phone');
+                    $('body').toggleClass('lock');
+                    $('.close-city-list').toggleClass('active');
+                }
             }
         );
 
         $('.close-city-list').click(
             function (event) {
-                $('.header-city-list').toggleClass('active');
+                $('.header-city-list').toggleClass('active_phone');
                 $('.close-city-list').toggleClass('active');
+                $('body').toggleClass('lock');
             }
         );
 
