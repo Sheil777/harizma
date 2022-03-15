@@ -181,12 +181,48 @@
   border: 1px solid #393C43;
   margin-right: 24px;
   color: white;
+  transition:  all 0.3s ease-in-out;
+
+  /*
+  &:hover {
+    background: #FFFFFF;
+    border: 1px solid black;
+    color: black;
+  }
+  */
 }
 
 .menu__button_2 {
-
   background: #FFFFFF;
   border: 1px solid black;
+  transition:  all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+/*
+  &:before {
+    position: absolute;
+    left: -100px;
+    top: 0;
+
+    content: "";
+    display: block;
+    background-color: rgb(246, 144, 32, 0.5);
+    height: 100%;
+    width: 80px;
+    transform: skewX(-45deg) translateX(0px);
+    transition:  all 0.4s ease-in-out;
+  }
+*/
+  &:hover {
+    background: transparent;
+    border: 1px solid #393C43;
+    color: white;
+/*
+    &:before {
+      transform: skewX(-45deg) translateX(330px);
+    }
+*/
+  }
 }
 
 .header__burger {

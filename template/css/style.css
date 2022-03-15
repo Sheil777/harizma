@@ -96,8 +96,10 @@ body.lock {
 .buttonGold {
   width: 280px;
   height: 70px;
-  background: linear-gradient(93.25deg, #EA422A 0%, #F69020 48.58%, #FFC619 101.38%);
+  background: linear-gradient(93.25deg, #FFC619, #F69020, #EA422A, #F69020, #FFC619);
   border-radius: 60px;
+  background-size: 200%;
+  background-position: 100%;
   font-family: Muller;
   font-style: normal;
   font-weight: bold;
@@ -109,6 +111,12 @@ body.lock {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.4s;
+}
+.buttonGold:hover {
+  background-size: 300%;
+  cursor: pointer;
+  background-position: 20%;
 }
 
 .header {
@@ -271,11 +279,47 @@ body.lock {
   border: 1px solid #393C43;
   margin-right: 24px;
   color: white;
+  transition: all 0.3s ease-in-out;
+  /*
+  &:hover {
+    background: #FFFFFF;
+    border: 1px solid black;
+    color: black;
+  }
+  */
 }
 
 .menu__button_2 {
   background: #FFFFFF;
   border: 1px solid black;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  /*
+    &:before {
+      position: absolute;
+      left: -100px;
+      top: 0;
+
+      content: "";
+      display: block;
+      background-color: rgb(246, 144, 32, 0.5);
+      height: 100%;
+      width: 80px;
+      transform: skewX(-45deg) translateX(0px);
+      transition:  all 0.4s ease-in-out;
+    }
+  */
+}
+.menu__button_2:hover {
+  background: transparent;
+  border: 1px solid #393C43;
+  color: white;
+  /*
+      &:before {
+        transform: skewX(-45deg) translateX(330px);
+      }
+  */
 }
 
 .header__burger {

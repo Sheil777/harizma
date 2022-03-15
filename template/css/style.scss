@@ -114,8 +114,11 @@ body.lock {
     width: 280px;
     height: 70px;
 
-    background: linear-gradient(93.25deg, #EA422A 0%, #F69020 48.58%, #FFC619 101.38%);
+    // background: linear-gradient(93.25deg, #EA422A 0%, #F69020 48.58%, #FFC619 101.38%);
+    background: linear-gradient(93.25deg, #FFC619, #F69020, #EA422A, #F69020, #FFC619);
     border-radius: 60px;
+    background-size: 200%;
+    background-position: 100%;
 
     font-family: Muller;
     font-style: normal;
@@ -130,7 +133,13 @@ body.lock {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.4s;
 
+    &:hover {
+        background-size: 300%;
+        cursor: pointer;
+        background-position: 20%;
+    }
 }
 
 @import "header";
