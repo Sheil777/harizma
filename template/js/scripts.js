@@ -8,20 +8,28 @@ function editColorCities(el) {
 
     $('.header-city-list__item').each(
         function (index, element) {
+            element.removeAttribute('style');
             element.style.color = '#FFFFFF';
         }
     );
 
     el.style.color = '#F69020';
+    if(document.querySelector(".wrapper").offsetWidth <= 700) {
+        el.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+    }
 }
 
 function editColorCityByName(name) {
     $('.header-city-list__item').each(
         function (index, element) {
-            if(element.textContent == name)
+            if(element.textContent == name){
                 element.style.color = '#F69020';
-            else
+                if(document.querySelector(".wrapper").offsetWidth <= 700) {
+                    element.style.backgroundColor = 'rgba(255, 255, 255, 0.07)';
+                }
+            } else {
                 element.style.color = '#FFFFFF';
+            }
         }
     );
 
@@ -59,6 +67,7 @@ $(document).ready(
         $('.header__city_phone').click(
             function (event) {
                 if(document.querySelector(".wrapper").offsetWidth <= 700) {
+                    document.querySelector('.header-city-list').removeAttribute('style');
                     $('.header-city-list').toggleClass('active_phone');
                     $('body').toggleClass('lock');
                     $('.close-city-list').toggleClass('active');
@@ -68,9 +77,13 @@ $(document).ready(
 
         $('.close-city-list').click(
             function (event) {
-                $('.header-city-list').toggleClass('active_phone');
+                document.querySelector('.header-city-list').style.height = 0;
                 $('.close-city-list').toggleClass('active');
-                $('body').toggleClass('lock');
+                setTimeout(function (){
+                    $('.header-city-list').toggleClass('active_phone');
+                    $('body').toggleClass('lock');
+                }, 500);
+
             }
         );
 

@@ -245,7 +245,6 @@ body.lock {
 .header-city-list__item:first-child {
   margin-top: 15px;
 }
-
 .header-city-list.active_phone {
   position: fixed;
   left: 0;
@@ -267,17 +266,20 @@ body.lock {
 }
 
 .close-city-list {
-  display: none;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.5s;
 }
 
 .close-city-list.active {
-  display: block;
+  visibility: visible;
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   z-index: 30;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .menu__list {
