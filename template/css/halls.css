@@ -1,3 +1,68 @@
+.halls {
+  background: #131517;
+  height: 100vh;
+}
 
+.halls__background {
+  position: relative;
+  z-index: -1;
+}
+.halls__background img {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1850px) {
+  .halls__background {
+    right: -120px;
+  }
+}
+@media (max-width: 1600px) {
+  .halls__background {
+    right: -240px;
+  }
+}
+@media (max-width: 1250px) {
+  .halls__background {
+    right: -225px;
+  }
+}
+@media (max-width: 991.98px) {
+  .halls__background {
+    right: -265px;
+  }
+}
+@media (max-width: 767.98px) {
+  .halls__background {
+    right: -265px;
+  }
+}
+@media (max-width: 700px) {
+  .halls__background {
+    right: -33vw;
+  }
+}
+
+.halls__header {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 82px;
+  /* or 109% */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.halls__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 48px;
+  /* or 200% */
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 432px;
+}
 
 /*# sourceMappingURL=halls.css.map */

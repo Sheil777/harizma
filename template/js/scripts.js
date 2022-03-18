@@ -112,3 +112,9 @@ $(document).ready(
         $('.popup-reserve__phone').mask("+7 (999) 99-99-999");
     }
 );
+
+// Слайдер
+
+new Swiper('.main-slider__container',{
+
+});
