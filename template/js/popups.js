@@ -92,7 +92,8 @@ function bodyUnlock(){
             }
         }
         body.style.paddingRight = '0px';
-        body.classList.remove('lock');
+        if(document.querySelector(".header_phone") == null) // Если открыто мобильное меню
+            body.classList.remove('lock');
     }, timeout);
 
     unlock = false;
