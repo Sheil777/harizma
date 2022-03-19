@@ -1298,6 +1298,7 @@ body.lock {
   /* or 109% */
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 70px;
   color: #FFFFFF;
   white-space: nowrap;
   position: relative;
@@ -1330,10 +1331,29 @@ body.lock {
 }
 .halls__characteristics {
   color: white;
+  margin-top: 35px;
 }
 .halls__move {
   color: white;
 }
+.halls-list__wrapper {
+  display: flex;
+}
+.halls-list__text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #606571;
+  margin-right: 40px;
+  margin-top: 100px;
+}
+.halls-list__text.active {
+  color: #FFC619;
+}
+
 .main-slider {
   overflow: hidden;
 }
