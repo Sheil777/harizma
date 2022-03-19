@@ -117,4 +117,12 @@ $(document).ready(
 
 new Swiper('.main-slider__container',{
 
+    // Миниатюры
+    thumbs: {
+        swiper: {
+            el: '.min-slider__container',
+            slidesPerView: 5,
+        }
+
+    }
 });
