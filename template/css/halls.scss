@@ -1,6 +1,6 @@
 .halls {
   background: rgb(19,21,23);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .halls__background {
@@ -62,6 +62,11 @@
     //min-width: 0;
   }
 
+  &__header, &__text, &__list, &__move, &__button {
+    position: relative;
+    z-index: 1;
+  }
+
   &__header {
     font-style: normal;
     font-weight: 900;
@@ -75,8 +80,6 @@
 
     color: #FFFFFF;
     white-space: nowrap;
-    position: relative;
-    z-index: 1;
   }
 
   &__text {
@@ -115,13 +118,95 @@
   &__characteristics {
     color: white;
     margin-top: 35px;
+
+    .halls-characteristics__item {
+      display: flex;
+      align-items: center;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+
+      color: #FFFFFF;
+
+      width: 325px;
+      height: 40px;
+
+      margin-top: 11px;
+
+      img {
+        margin: 0 12px;
+      }
+
+      &_first {
+        background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 35%);
+      }
+
+      &_second {
+        background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 45%);
+      }
+
+      &_third {
+        background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 85%);
+      }
+
+    }
   }
 
   &__move {
+    display: flex;
+    align-items: center;
     color: white;
+    margin-top: 80px;
+
+    .halls-move {
+      &__last, &__next {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__last {
+        border: 1px solid #282B32;
+        box-sizing: border-box;
+      }
+
+      &__number {
+        span {
+          font-style: normal;
+          font-weight: 500;
+          line-height: 48px;
+          /* or 200% */
+
+          letter-spacing: 0.03em;
+
+          margin: 0 30px;
+          color: #606571;
+
+          b {
+            font-size: 24px;
+            color: white;
+          }
+
+        }
+      }
+
+      &__next {
+        background: #2E3441;
+      }
+    }
   }
 
-  &__buttons {
+  &__button {
+    margin-top: 60px;
+    width: 277px;
+    height: 70px;
   }
 }
 
