@@ -107,6 +107,16 @@ $(document).ready(
             }
         );
 
+        // Смена номера слайда
+        hallsSlider.on('slideChange', function () {
+            let tagB = document.querySelector(".halls-move__number").getElementsByTagName("b")[0];
+            tagB.textContent = hallsSlider.activeIndex+1;
+        });
+
+        // Вывод общего кол-во слайдов на странице
+        let numOfSlides = document.querySelectorAll(".main-slider__slide").length;
+        document.querySelector('.halls-move__maxSlide').textContent = numOfSlides;
+
 
         // Маска для номера телефона
         $('.popup-reserve__phone').mask("+7 (999) 99-99-999");
@@ -114,8 +124,12 @@ $(document).ready(
 );
 
 // Слайдер
+let hallsSlider = new Swiper('.main-slider__container',{
 
-new Swiper('.main-slider__container',{
+    navigation: {
+      nextEl: ".halls-move__next",
+      prevEl: ".halls-move__last",
+    },
 
     // Миниатюры
     thumbs: {

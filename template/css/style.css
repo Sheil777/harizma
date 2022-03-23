@@ -1366,6 +1366,11 @@ body.lock {
   color: white;
   margin-top: 80px;
 }
+.halls__move .halls-move__last.swiper-button-disabled, .halls__move .halls-move__next.swiper-button-disabled {
+  border: 1px solid #282B32;
+  box-sizing: border-box;
+  background: none !important;
+}
 .halls__move .halls-move__last, .halls__move .halls-move__next {
   width: 70px;
   height: 70px;
@@ -1373,10 +1378,11 @@ body.lock {
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+  background: #2E3441;
 }
-.halls__move .halls-move__last {
-  border: 1px solid #282B32;
-  box-sizing: border-box;
+.halls__move .halls-move__last:hover, .halls__move .halls-move__next:hover {
+  cursor: pointer;
 }
 .halls__move .halls-move__number span {
   font-style: normal;
@@ -1391,8 +1397,8 @@ body.lock {
   font-size: 24px;
   color: white;
 }
-.halls__move .halls-move__next {
-  background: #2E3441;
+.halls__move .halls-move__number span .halls-move__maxSlide {
+  margin: 0;
 }
 .halls__button {
   margin-top: 60px;
@@ -1467,6 +1473,11 @@ body.lock {
   height: inherit;
   width: 100px;
   position: relative;
+  opacity: 0.2;
+  transition: opacity 0.3s ease 0s;
+}
+.min-slider__slide.swiper-slide-thumb-active {
+  opacity: 1;
 }
 .min-slider__slide:after {
   content: "";
@@ -1482,6 +1493,7 @@ body.lock {
 }
 .min-slider__slide:hover {
   cursor: pointer;
+  opacity: 1;
 }
 .min-slider__slide:hover:after {
   background: rgba(255, 198, 25, 0.4);

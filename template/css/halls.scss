@@ -162,6 +162,12 @@
     margin-top: 80px;
 
     .halls-move {
+      &__last.swiper-button-disabled, &__next.swiper-button-disabled {
+        border: 1px solid #282B32;
+        box-sizing: border-box;
+        background: none !important;
+      }
+
       &__last, &__next {
         width: 70px;
         height: 70px;
@@ -170,11 +176,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        user-select: none;
+
+        background: #2E3441;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       &__last {
-        border: 1px solid #282B32;
-        box-sizing: border-box;
       }
 
       &__number {
@@ -194,11 +206,13 @@
             color: white;
           }
 
+          .halls-move__maxSlide {
+            margin: 0;
+          }
         }
       }
 
       &__next {
-        background: #2E3441;
       }
     }
   }
@@ -298,6 +312,12 @@
     height: inherit;
     width: 100px;
     position: relative;
+    opacity: 0.2;
+    transition: opacity 0.3s ease 0s;
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
 
     &:after {
       content: "";
@@ -317,6 +337,7 @@
 
     &:hover {
       cursor: pointer;
+      opacity: 1;
 
       &:after {
         background: rgba(255, 198, 25, 0.4);
