@@ -63,11 +63,13 @@
   }
 
   &__header, &__text, &__list, &__move, &__button {
+    width: 460px;
     position: relative;
     z-index: 1;
   }
 
   &__header {
+    display: inline-block;
     font-style: normal;
     font-weight: 900;
     font-size: 75px;
@@ -225,12 +227,15 @@
 }
 
 .halls-list {
+  width: 420px;
+
   &__container {
 
   }
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__text {
@@ -242,7 +247,7 @@
     text-transform: uppercase;
     color: #606571;
 
-    margin-right: 40px;
+    // margin-right: 40px;
     margin-top: 100px;
 
     &.active {

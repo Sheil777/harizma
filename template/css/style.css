@@ -879,36 +879,70 @@ body.lock {
 }
 @media (max-width: 1400px) {
   .main__header {
-    font-size: 20.5px;
+    font-size: 28.7px;
   }
 
   .main__text span:first-child {
-    font-size: 37.5px;
-    line-height: 47px;
+    font-size: 52.5px;
+    line-height: 65.8px;
   }
 
   .main__item {
-    margin-right: 25px;
+    margin-right: 35px;
   }
 
   .mainItem__text {
     display: flex;
     align-items: center;
-    font-size: 9px;
-    line-height: 12px;
+    font-size: 12.6px;
+    line-height: 16.8px;
   }
 
   .main__textCity {
-    margin-top: 12.5px;
-    margin-left: 12.5px;
+    margin-top: 17.5px;
+    margin-left: 17.5px;
   }
 
   .main__advantage {
-    margin-top: 25px;
+    margin-top: 35px;
   }
 
   .main__button {
-    margin-top: 37.5px;
+    margin-top: 52.5px;
+  }
+}
+@media (max-width: 1000px) {
+  .main__header {
+    font-size: 24.6px;
+  }
+
+  .main__text span:first-child {
+    font-size: 45px;
+    line-height: 56.4px;
+  }
+
+  .main__item {
+    margin-right: 30px;
+  }
+
+  .mainItem__text {
+    display: flex;
+    align-items: center;
+    font-size: 10.8px;
+    line-height: 14.4px;
+  }
+
+  .main__textCity {
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+
+  .main__advantage {
+    margin-top: 30px;
+  }
+
+  .main__button {
+    margin-top: 45px;
   }
 }
 @media (max-width: 900px) {
@@ -1042,6 +1076,8 @@ body.lock {
 }
 .main-advantages__container {
   display: flex;
+  max-width: 1924px;
+  margin: 0 auto;
 }
 
 .main-advantages__item {
@@ -1291,10 +1327,12 @@ body.lock {
   max-width: 1920px;
 }
 .halls__header, .halls__text, .halls__list, .halls__move, .halls__button {
+  width: 460px;
   position: relative;
   z-index: 1;
 }
 .halls__header {
+  display: inline-block;
   font-style: normal;
   font-weight: 900;
   font-size: 75px;
@@ -1406,8 +1444,12 @@ body.lock {
   height: 70px;
 }
 
+.halls-list {
+  width: 420px;
+}
 .halls-list__wrapper {
   display: flex;
+  justify-content: space-between;
 }
 .halls-list__text {
   font-style: normal;
@@ -1417,7 +1459,6 @@ body.lock {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #606571;
-  margin-right: 40px;
   margin-top: 100px;
 }
 .halls-list__text.active {

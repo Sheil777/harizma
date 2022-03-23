@@ -27,10 +27,9 @@ $mainHeight: 840px;
     height: 800px;
     width: 1200px;
 
-    box-shadow: 0px 30px 90px 160px rgb(25,27,32) inset;
+    box-shadow: 0px 30px 90px 160px rgb(25, 27, 32) inset;
   }
 }
-
 
 
 /* Adaptive */
@@ -63,6 +62,7 @@ $mainHeight: 840px;
     right: 550px - 120px !important;
   }
 }
+
 //
 //@media (max-width: 1399.98px) {
 //  .main__background {
@@ -292,7 +292,7 @@ $percent1700: 75; // Процент для меньше 1700
   }
 }
 
-$percent1400: 50; // Процент для меньше 1400
+$percent1400: 70; // Процент для меньше 1400
 
 @media (max-width: 1400px) {
   .main__header {
@@ -331,6 +331,45 @@ $percent1400: 50; // Процент для меньше 1400
   }
 }
 
+$percent1000: 60; // Процент для меньше 1000
+
+@media (max-width: 1000px) {
+  .main__header {
+    font-size: 41px * $percent1000 / 100;
+  }
+
+  .main__text span:first-child {
+    font-size: 75px * $percent1000 / 100;
+    line-height: 94px * $percent1000 / 100;
+  }
+
+  .main__item {
+    margin-right: 50px * $percent1000 / 100;
+  }
+
+  .mainItem__text {
+    display: flex;
+    align-items: center;
+
+    font-size: 18px * $percent1000 / 100;
+    line-height: 24px * $percent1000 / 100;
+  }
+
+  .main__textCity {
+    margin-top: 25px * $percent1000 / 100;
+    margin-left: 25px * $percent1000 / 100
+  }
+
+  .main__advantage {
+    margin-top: 50px * $percent1000 / 100;
+  }
+
+  .main__button {
+    margin-top: 75px * $percent1000 / 100;
+
+  }
+}
+
 @media (max-width: 900px) {
   .main__advantage {
     display: flex;
@@ -363,12 +402,11 @@ $percent1400: 50; // Процент для меньше 1400
     }
   }
 
-  .main__background2{
+  .main__background2 {
     right: 180px !important;
     top: 160px;
   }
 }
-
 
 
 /* Phone */
@@ -434,7 +472,7 @@ $percent1400: 50; // Процент для меньше 1400
     width: 100vw;
     top: 14vw;
   }
-  
+
   .main__feedback {
     display: none;
   }
