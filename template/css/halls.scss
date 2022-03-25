@@ -1,6 +1,6 @@
 .halls {
   background: rgb(19,21,23);
-  min-height: 100vh;
+  min-height: 1000px; //100vh;
 }
 
 .halls__background {
@@ -228,6 +228,7 @@
 
 .halls-list {
   width: 420px;
+  margin-top: 60px;
 
   &__container {
 
@@ -248,7 +249,7 @@
     color: #606571;
 
     // margin-right: 40px;
-    margin-top: 100px;
+    margin-top: 40px; //100px;
 
     &.active {
       color: #FFC619;
@@ -364,5 +365,110 @@
       object-fit: cover;
       //object-position: center;
     }
+  }
+}
+
+// Adaptive
+// 1700 1400 1000 900
+
+$hallsPercent1500: 70 / 100;
+
+@media (max-width: 1500px) {
+  .halls {
+    &__slider {
+      padding-left: 340px;
+    }
+
+    &__header {
+      font-size: 56px;
+      margin-bottom: 70px * $hallsPercent1500;
+    }
+
+    &__text {
+      width: 432px * $hallsPercent1500;
+      font-size: 24px * $hallsPercent1500;
+      line-height: 48px * $hallsPercent1500;
+    }
+  }
+
+  .halls-list {
+    width: 300px;
+    //font-size: 13px;
+    margin-top: 30px;
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      margin-right: 10px;
+    }
+  };
+}
+
+
+@media (max-width: 1200px) {
+  .halls {
+    &__container {
+      margin-right: 50px;
+    }
+
+    &__slider {
+      position: static;
+      padding-left: 0;
+    }
+
+    &__header {
+      font-size: 75px;
+      margin-bottom: 70px * $hallsPercent1500;
+    }
+
+    &__text {
+      width: 432px;
+      font-size: 24px;
+      line-height: 48px;
+    }
+  }
+
+  .halls-list {
+    width: 70%;
+    //font-size: 13px;
+    margin: 30px auto;
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      margin-right: 10px;
+    }
+  }
+
+  // Основной слайд сохраняет пропорции
+  .main-slider {
+    height: 60vh;
+  }
+
+  // Миниатюры сохраняют свои пропорции
+  .min-slider {
+    height: auto;
+  }
+
+  .min-slider__slide {
+    height: auto;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 60%;
+    }
+  }
+
+  .min-slider__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
