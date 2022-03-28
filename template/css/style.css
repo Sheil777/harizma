@@ -1422,13 +1422,16 @@ body.lock {
 .halls__move .halls-move__last:hover, .halls__move .halls-move__next:hover {
   cursor: pointer;
 }
+.halls__move .halls-move__number {
+  text-align: center;
+  width: 100px;
+}
 .halls__move .halls-move__number span {
   font-style: normal;
   font-weight: 500;
   line-height: 48px;
   /* or 200% */
   letter-spacing: 0.03em;
-  margin: 0 30px;
   color: #606571;
 }
 .halls__move .halls-move__number span b {
@@ -1580,6 +1583,9 @@ body.lock {
   }
 }
 @media (max-width: 1200px) {
+  .halls {
+    padding-bottom: 30px;
+  }
   .halls__container {
     margin-right: 50px;
   }
@@ -1596,6 +1602,16 @@ body.lock {
     font-size: 24px;
     line-height: 48px;
   }
+  .halls__move {
+    width: auto;
+    margin-top: -142px;
+    justify-content: right;
+    margin-right: 16px;
+  }
+  .halls__button {
+    margin-left: auto;
+    margin-top: 30px;
+  }
 
   .halls-list {
     width: 70%;
@@ -1609,7 +1625,7 @@ body.lock {
   }
 
   .main-slider {
-    height: 60vh;
+    height: 50vw;
   }
 
   .min-slider {
@@ -1631,6 +1647,73 @@ body.lock {
     right: 0;
     bottom: 0;
     left: 0;
+  }
+}
+@media (max-width: 700px) {
+  .halls {
+    padding-top: 15vw;
+  }
+  .halls__container {
+    margin-right: 0;
+  }
+  .halls__header {
+    font-size: 10vw;
+    margin-bottom: 4vw;
+  }
+  .halls__text {
+    width: auto;
+    font-size: 5.5vw;
+    margin-top: 6vw;
+    line-height: 8vw;
+  }
+  .halls__slider {
+    margin-left: -3vw;
+    width: 106vw;
+  }
+  .halls__main-slider {
+    height: 70vw;
+  }
+  .halls__move {
+    margin-top: 5vw;
+    justify-content: start;
+  }
+  .halls__button {
+    margin-left: 0;
+    margin-top: 5vw;
+    width: 55vw;
+    height: 13vw;
+    font-size: 3vw;
+    line-height: 0;
+  }
+
+  .halls-move__last, .halls-move__next {
+    width: 13vw !important;
+    height: 13vw !important;
+  }
+  .halls-move__number {
+    font-size: 4vw;
+    width: 22vw !important;
+  }
+  .halls-move__number span b {
+    font-size: 5vw !important;
+  }
+
+  .halls-list {
+    width: 100%;
+  }
+  .halls-list__text {
+    font-size: 4vw;
+    margin-right: 4vw;
+    line-height: 2vw;
+  }
+
+  .halls-characteristics__item {
+    height: 9vw !important;
+    font-size: 4vw !important;
+  }
+  .halls-characteristics__item img {
+    width: 5vw;
+    margin: 0 2vw !important;
   }
 }
 @media (max-width: 700px) {
