@@ -494,6 +494,8 @@ $hallsPercent1500: 70 / 100;
 @media (max-width: 700px) {
   .halls {
     padding-top: 15vw;
+    //padding-bottom: 0;
+    min-height: unset;
 
     &__container {
       margin-right: 0;
@@ -573,6 +575,12 @@ $hallsPercent1500: 70 / 100;
         width: 5vw;
         margin: 0 2vw !important;
       }
+    }
+  }
+
+  .min-slider__slide {
+    &:after {
+      display: none;
     }
   }
 }

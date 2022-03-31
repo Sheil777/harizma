@@ -38,15 +38,17 @@ function editColorCityByName(name) {
 
 $(document).ready(
     function() {
-        $('.header__burger').click(
+        $('.header__burger, .close-header-phone').click(
             function (event) {
                 $('div.header__burger').toggleClass('header__burger_close');
                 $('header.header').toggleClass('header_phone');
                 $('div.header__city_phone').toggleClass('header__city_phoneDisable');
                 $('div.header__block, .header__logo').toggleClass('active');
                 $('body').toggleClass('lock');
+                $('.close-header-phone').toggleClass('active'); // Фон и закрытие заднего мобильной шапки
             }
         );
+
 /*
         $('.header__cityName, .header__circle, .header-city-list__item').click(
             function (event) {
@@ -106,6 +108,7 @@ $(document).ready(
                 editColorCities(el);
             }
         );
+
 
         // Смена номера слайда
         hallsSlider.on('slideChange', function () {
