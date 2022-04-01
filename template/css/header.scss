@@ -603,20 +603,23 @@
 
   // Подложка под шапку сзади на мобильных устройствах
   .close-header-phone {
-    visibility: hidden;
-    background: rgba(0,0,0,0);
-    transition: all 0.5s;
-  }
-
-  .close-header-phone.active {
-    visibility: visible;
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 25;
-    background: rgba(0,0,0,0.5);
+
+    visibility: hidden;
+    transition: all 0.5s;
+
+    background: black;
+    opacity: 0;
+  }
+
+  .close-header-phone.active {
+    visibility: visible;
+    opacity: 0.6;
   }
 
 }

@@ -49,6 +49,19 @@ $(document).ready(
             }
         );
 
+        $('.menu__button_1').click(
+            function (event) {
+                if(document.querySelector(".wrapper").offsetWidth <= 700) {
+                    $('div.header__burger').toggleClass('header__burger_close');
+                    $('header.header').toggleClass('header_phone');
+                    $('div.header__city_phone').toggleClass('header__city_phoneDisable');
+                    $('div.header__block, .header__logo').toggleClass('active');
+                    $('body').toggleClass('lock');
+                    $('.close-header-phone').toggleClass('active'); // Фон и закрытие заднего мобильной шапки
+                }
+            }
+        );
+
 /*
         $('.header__cityName, .header__circle, .header-city-list__item').click(
             function (event) {

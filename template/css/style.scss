@@ -149,9 +149,10 @@ body.lock {
 
 @import "header";
 @import "main";
-@import "advantages";
+@import "main-advantages";
 @import "popups";
 @import "halls";
+@import "advantages";
 
 @media (max-width: 700px) {
     ._container {
