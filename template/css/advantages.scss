@@ -5,6 +5,7 @@
 
 .advantages__background {
   position: relative;
+  z-index: -1;
 
   img {
     position: absolute;
@@ -44,6 +45,119 @@
   @media (max-width: 700px) {
     & {
       right: -33vw;
+    }
+  }
+}
+
+.advantages__background2 {
+  position: relative;
+
+  img {
+    //box-shadow: 25px 25px 50px 0 rgba(0,0,0,0) inset, -25px -25px 50px 0 rgba(0,0,0,0) inset;
+    position: absolute;
+    top: 150px;
+    right: -50px;
+  }
+}
+
+.advantages {
+  &__title {
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 82px;
+    /* or 109% */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    padding-top: 100px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    /* or 200% */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    margin-top: 30px;
+  }
+
+  &__button {
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: 50px;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.advantages-cards {
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 300px;
+    width: 430px;
+    padding: 50px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(odd) {
+      background: #282B32;
+    }
+
+    &:nth-child(even) {
+      background: #202124;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+
+
+    margin-top: 30px;
+  }
+
+  &__list {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+
+    letter-spacing: 0.03em;
+    list-style-type: none;
+
+    color: #C5C5C5;
+
+    margin-top: 15px;
+
+    li span {
+        color: #F69020;
+    }
+
+    li:before {
+      display: inline;
+      content: url("../img/advantages/li.png");
+      margin-right: 10px;
     }
   }
 }
