@@ -1491,6 +1491,9 @@ body.lock {
 .halls-list__text.active {
   color: #FFC619;
 }
+.halls-list__text:hover {
+  cursor: pointer;
+}
 
 .main-slider {
   overflow: hidden;

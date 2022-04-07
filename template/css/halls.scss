@@ -257,6 +257,10 @@
     &.active {
       color: #FFC619;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 

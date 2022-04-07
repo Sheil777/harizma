@@ -141,6 +141,7 @@ $(document).ready(
 
 // Слайдер
 let hallsSlider = new Swiper('.main-slider__container',{
+    observer: true,
 
     navigation: {
       nextEl: ".halls-move__next",
@@ -150,6 +151,7 @@ let hallsSlider = new Swiper('.main-slider__container',{
     // Миниатюры
     thumbs: {
         swiper: {
+            observer: true,
             el: '.min-slider__container',
             slidesPerView: 5,
         }
