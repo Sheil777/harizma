@@ -1,0 +1,40 @@
+.teleg__background {
+  position: relative;
+  z-index: -1;
+}
+.teleg__background img {
+  position: absolute;
+  right: -1px;
+}
+@media (max-width: 1850px) {
+  .teleg__background {
+    right: -120px;
+  }
+}
+@media (max-width: 1600px) {
+  .teleg__background {
+    right: -240px;
+  }
+}
+@media (max-width: 1250px) {
+  .teleg__background {
+    right: -225px;
+  }
+}
+@media (max-width: 991.98px) {
+  .teleg__background {
+    right: -265px;
+  }
+}
+@media (max-width: 767.98px) {
+  .teleg__background {
+    right: -265px;
+  }
+}
+@media (max-width: 700px) {
+  .teleg__background {
+    right: -33vw;
+  }
+}
+
+/*# sourceMappingURL=telegram.css.map */
