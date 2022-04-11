@@ -2065,9 +2065,50 @@ body.lock {
   margin-top: 45px;
 }
 
-.telegram-slide {
-  width: 252px;
+.telegram-slider {
   margin-top: 55px;
+}
+.telegram-slider__background {
+  position: relative;
+}
+.telegram-slider__background img {
+  position: absolute;
+  left: -17px;
+  top: -16px;
+}
+.telegram-slider__container {
+  width: 252px;
+  margin: 0 auto;
+}
+.telegram-slider__wrapper {
+  display: flex;
+}
+.telegram-slide {
+  position: relative;
+  width: 252px;
+}
+.telegram-slide__number {
+  opacity: 0;
+  transition: all 0.1s;
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #F69020;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 7px;
+  box-sizing: border-box;
+}
+.swiper-slide-active .telegram-slide__number {
+  opacity: 1;
 }
 .telegram-slide__img {
   position: relative;

@@ -158,3 +158,8 @@ let hallsSlider = new Swiper('.main-slider__container',{
 
     }
 });
+
+new Swiper('.telegram-slider__container',{
+    spaceBetween: 100,
+    initialSlide: 2,
+});
