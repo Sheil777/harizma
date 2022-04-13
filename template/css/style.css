@@ -122,6 +122,51 @@ body.lock {
   box-sizing: border-box;
 }
 
+/* Навигация между слайдами */
+.pagination-slider {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.pagination-slider__prev.swiper-button-disabled, .pagination-slider__next.swiper-button-disabled {
+  border: 1px solid #282B32;
+  box-sizing: border-box;
+  background: none !important;
+}
+.pagination-slider__prev, .pagination-slider__next {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background: #2E3441;
+}
+.pagination-slider__prev:hover, .pagination-slider__next:hover {
+  cursor: pointer;
+}
+.pagination-slider__text {
+  text-align: center;
+  width: 100px;
+}
+.pagination-slider__text span {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 48px;
+  /* or 200% */
+  letter-spacing: 0.03em;
+  color: #606571;
+}
+.pagination-slider__text span b {
+  font-size: 24px;
+  color: white;
+}
+.pagination-slider__text span .pagination-slider__maxSlide {
+  margin: 0;
+}
+
+/* Адаптивный шрифт */
 .header {
   position: absolute;
   top: 40px;
@@ -1422,47 +1467,7 @@ body.lock {
   background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 85%);
 }
 .halls__move {
-  display: flex;
-  align-items: center;
-  color: white;
   margin-top: 80px;
-}
-.halls__move .halls-move__last.swiper-button-disabled, .halls__move .halls-move__next.swiper-button-disabled {
-  border: 1px solid #282B32;
-  box-sizing: border-box;
-  background: none !important;
-}
-.halls__move .halls-move__last, .halls__move .halls-move__next {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  background: #2E3441;
-}
-.halls__move .halls-move__last:hover, .halls__move .halls-move__next:hover {
-  cursor: pointer;
-}
-.halls__move .halls-move__number {
-  text-align: center;
-  width: 100px;
-}
-.halls__move .halls-move__number span {
-  font-style: normal;
-  font-weight: 500;
-  line-height: 48px;
-  /* or 200% */
-  letter-spacing: 0.03em;
-  color: #606571;
-}
-.halls__move .halls-move__number span b {
-  font-size: 24px;
-  color: white;
-}
-.halls__move .halls-move__number span .halls-move__maxSlide {
-  margin: 0;
 }
 .halls__button {
   margin-top: 60px;
@@ -2048,21 +2053,47 @@ body.lock {
 
 .telegram__header {
   font-weight: 900;
-  font-size: 75px;
   line-height: 82px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
   padding-top: 110px;
 }
+@media (max-width: 767px) {
+  .telegram__header {
+    font-size: calc(15px + 102 * ((100vw - 320px) / 1824));
+  }
+}
+@media (min-width: 767px) {
+  .telegram__header {
+    font-size: calc(15px + 60 * (100vw / 1824));
+  }
+}
 .telegram__text {
   font-weight: 400;
-  font-size: 24px;
   line-height: 48px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-top: 45px;
+}
+@media (max-width: 767px) {
+  .telegram__text {
+    font-size: calc(10px + 23.8 * ((100vw - 320px) / 1824));
+  }
+}
+@media (min-width: 767px) {
+  .telegram__text {
+    font-size: calc(10px + 14 * (100vw / 1824));
+  }
+}
+.telegram__container {
+  position: relative;
+}
+.telegram__pagination {
+  position: absolute;
+  top: 215px;
+  right: 52px;
 }
 
 .telegram-slider {
@@ -2083,6 +2114,14 @@ body.lock {
 .telegram-slider__wrapper {
   display: flex;
 }
+.telegram-slider__slide {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}
+.telegram-slider__slide.swiper-slide-prev, .telegram-slider__slide.swiper-slide-active, .telegram-slider__slide.swiper-slide-next {
+  opacity: 1;
+}
+
 .telegram-slide {
   position: relative;
   width: 252px;
@@ -2145,6 +2184,24 @@ body.lock {
   color: #F69020;
 }
 
+/*
+@media (max-width: 1500px) {
+  .telegram {
+    &__header {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .telegram {
+    &__header {
+      font-size: 40px;
+    }
+  }
+}
+
+ */
 @media (max-width: 700px) {
   ._container {
     padding: 0 3vw;

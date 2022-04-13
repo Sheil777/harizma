@@ -128,10 +128,16 @@ $(document).ready(
             let tagB = document.querySelector(".halls-move__number").getElementsByTagName("b")[0];
             tagB.textContent = hallsSlider.activeIndex+1;
         });
+        telegramSlider.on('slideChange', function () {
+            let tagB = document.querySelector(".telegram-pagination__text").getElementsByTagName("b")[0];
+            tagB.textContent = telegramSlider.activeIndex+1;
+        });
 
         // Вывод общего кол-во слайдов на странице
         let numOfSlides = document.querySelectorAll(".main-slider__slide").length;
         document.querySelector('.halls-move__maxSlide').textContent = numOfSlides;
+        numOfSlides = document.querySelectorAll(".telegram-slider__slide").length;
+        document.querySelector('.telegram-pagination__maxSlide').textContent = numOfSlides;
 
 
         // Маска для номера телефона
@@ -159,7 +165,15 @@ let hallsSlider = new Swiper('.main-slider__container',{
     }
 });
 
-new Swiper('.telegram-slider__container',{
+let telegramSlider = new Swiper('.telegram-slider__container',{
     spaceBetween: 100,
     initialSlide: 2,
+    allowTouchMove: false,
+    speed: 100,
+
+    navigation: {
+        nextEl: ".telegram-pagination__next",
+        prevEl: ".telegram-pagination__prev"
+    },
+
 });
