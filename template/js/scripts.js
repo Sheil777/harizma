@@ -101,6 +101,16 @@ $(document).ready(
 
             }
         );
+        
+        $('.question-spoiler__header').click(
+          function (event) {
+              if($('.question-spoiler').hasClass('one')){
+                  $('.question-spoiler__header').not($(this)).removeClass('active');
+                  $('.question-spoiler__body').not($(this).next()).slideUp(300);
+              }
+              $(this).toggleClass('active').next().slideToggle(300);
+          }  
+        );
 
         // Если куки не записаны
         if($.cookie('city') == null) {
