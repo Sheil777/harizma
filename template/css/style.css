@@ -166,6 +166,19 @@ body.lock {
   margin: 0;
 }
 
+@media (max-width: 700px) {
+  .pagination-slider__prev, .pagination-slider__next {
+    width: 13vw !important;
+    height: 13vw !important;
+  }
+  .pagination-slider__text {
+    font-size: 4vw;
+    width: 22vw !important;
+  }
+  .pagination-slider__text span b {
+    font-size: 5vw !important;
+  }
+}
 /* Адаптивный шрифт */
 .header {
   position: absolute;
@@ -1719,18 +1732,24 @@ body.lock {
     line-height: 0;
   }
 
-  .halls-move__last, .halls-move__next {
-    width: 13vw !important;
-    height: 13vw !important;
-  }
-  .halls-move__number {
-    font-size: 4vw;
-    width: 22vw !important;
-  }
-  .halls-move__number span b {
-    font-size: 5vw !important;
-  }
+  /*
+    .halls-move {
+      &__last, &__next {
+        width: 13vw !important;
+        height: 13vw !important;
 
+      }
+
+      &__number {
+        font-size: 4vw;
+        width: 22vw !important;
+
+        span b {
+          font-size: 5vw !important;
+        }
+      }
+    }
+  */
   .halls-list {
     width: 100%;
   }
@@ -1738,6 +1757,7 @@ body.lock {
     font-size: 4vw;
     margin-right: 4vw;
     line-height: 2vw;
+    margin-top: 7vw;
   }
 
   .halls-characteristics__item {
@@ -2184,24 +2204,66 @@ body.lock {
   color: #F69020;
 }
 
-/*
-@media (max-width: 1500px) {
-  .telegram {
-    &__header {
-      font-size: 60px;
-    }
+@media (max-width: 1000px) {
+  .telegram__pagination {
+    position: static !important;
+    margin: 50px 0;
+    justify-content: center;
   }
 }
-
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
   .telegram {
-    &__header {
-      font-size: 40px;
-    }
+    min-height: auto;
+  }
+  .telegram__header {
+    font-size: 9vw;
+    line-height: 11vw;
+    padding-top: 15vw;
+  }
+  .telegram__text {
+    font-size: 5vw;
+    margin-top: 8vw;
+    line-height: 9vw;
+  }
+  .telegram__pagination {
+    margin: 10vw 0;
+  }
+
+  .telegram-slider {
+    margin-top: 15vw;
+  }
+  .telegram-slider__container {
+    width: 44.5vw;
+  }
+  .telegram-slider__background img {
+    width: 50vw;
+    left: -2.8vw;
+    top: -2.4vw;
+  }
+
+  .telegram-slide {
+    width: 50vw !important;
+  }
+  .telegram-slide__img {
+    height: auto;
+    border-radius: 5vw;
+  }
+  .telegram-slide__img img {
+    width: 44.5vw;
+  }
+  .telegram-slide__caption {
+    font-size: 3vw;
+    margin-top: 6vw;
+  }
+  .telegram-slide__icon img {
+    width: 8vw;
+  }
+  .telegram-slide__text {
+    font-size: 3vw;
+    width: 34vw;
+    line-height: 4vw;
   }
 }
-
- */
 @media (max-width: 700px) {
   ._container {
     padding: 0 3vw;

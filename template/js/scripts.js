@@ -166,7 +166,15 @@ let hallsSlider = new Swiper('.main-slider__container',{
 });
 
 let telegramSlider = new Swiper('.telegram-slider__container',{
-    spaceBetween: 100,
+
+    breakpoints: {
+        700: {
+            spaceBetween: 120,
+        }
+    },
+
+    spaceBetween: 60,
+
     initialSlide: 2,
     allowTouchMove: false,
     speed: 100,

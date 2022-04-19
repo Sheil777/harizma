@@ -484,6 +484,7 @@ $hallsPercent1500: 70 / 100;
 
   }
 
+  /*
   .halls-move {
     &__last, &__next {
       width: 13vw !important;
@@ -500,6 +501,7 @@ $hallsPercent1500: 70 / 100;
       }
     }
   }
+*/
 
   .halls-list {
     width: 100%;
@@ -508,6 +510,7 @@ $hallsPercent1500: 70 / 100;
       font-size: 4vw;
       margin-right: 4vw;
       line-height: 2vw;
+      margin-top: 7vw;
     }
   }
 

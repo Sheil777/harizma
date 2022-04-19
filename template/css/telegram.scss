@@ -201,21 +201,86 @@
   }
 }
 
-/*
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   .telegram {
-    &__header {
-      font-size: 60px;
+    &__pagination {
+      position: static !important;
+      margin: 50px 0;
+      justify-content: center;
     }
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 700px) {
   .telegram {
+    min-height: auto;
+
     &__header {
-      font-size: 40px;
+      font-size: 9vw;
+      line-height: 11vw;
+      padding-top: 15vw;
+    }
+
+    &__text {
+      font-size: 5vw;
+      margin-top: 8vw;
+      line-height: 9vw;
+    }
+
+    &__pagination {
+      margin: 10vw 0;
     }
   }
-}
 
- */
+  .telegram-slider {
+    margin-top: 15vw;
+
+    &__container {
+      // width: 50vw;
+      width: 44.5vw;
+    }
+
+    &__slide {
+      //margin-right: 5.1vw;
+    }
+
+    &__background {
+      img {
+        width: 50vw;
+        left: -2.8vw;
+        top: -2.4vw;
+      }
+    }
+  }
+
+  .telegram-slide {
+    width: 50vw !important;
+
+    &__img {
+      height: auto;
+      border-radius: 5vw;
+
+      img {
+        width: 44.5vw;
+      }
+    }
+
+    &__caption {
+      font-size: 3vw;
+      margin-top: 6vw;
+    }
+
+    &__icon {
+      img {
+        width: 8vw;
+      }
+    }
+
+    &__text {
+      font-size: 3vw;
+      width: 34vw;
+      line-height: 4vw;
+    }
+
+  }
+}
