@@ -40,26 +40,29 @@ class ChangeSlides {
                     "harizmahall2-11.jpg",
                     "harizmahall2-12.jpg"
                 )
+            },
+            "hall-3": {
+                pathSlides: "template/img/halls/hall-3/",
+                slide: Array(
+                    "hall3-1.jpg",
+                    "hall3-2.jpg",
+                    "hall3-3.jpg",
+                    "hall3-4.jpg",
+                    "hall3-5.jpg"
+                )
+            },
+            "hall-4": {
+                pathSlides: "template/img/halls/hall-4/",
+                slide: Array(
+                    "hall4-1.jpg",
+                    "hall4-2.jpg",
+                    "hall4-3.jpg",
+                    "hall4-4.jpg",
+                    "hall4-5.jpg"
+                )
             }
         }
     }
-
-    /*
-    slides = Array(
-        "harizmahall2-1.jpg",
-        "harizmahall2-2.jpg",
-        "harizmahall2-3.jpg",
-        "harizmahall2-4.jpg",
-        "harizmahall2-5.jpg",
-        "harizmahall2-6.jpg",
-        "harizmahall2-7.jpg",
-        "harizmahall2-8.jpg",
-        "harizmahall2-9.jpg",
-        "harizmahall2-10.jpg",
-        "harizmahall2-11.jpg",
-        "harizmahall2-12.jpg"
-    );
-*/
 
     createSlide(name, size = 'main') {
         let slideDiv = document.createElement('div');
@@ -142,5 +145,17 @@ $('#halls-list__hall-2').click(
     function (event) {
         a.change("hall-2");
         changeActiveOnHalls(document.querySelector('#halls-list__hall-2'));
+    }
+);
+$('#halls-list__hall-3').click(
+    function (event) {
+        a.change("hall-3");
+        changeActiveOnHalls(document.querySelector('#halls-list__hall-3'));
+    }
+);
+$('#halls-list__hall-4').click(
+    function (event) {
+        a.change("hall-4");
+        changeActiveOnHalls(document.querySelector('#halls-list__hall-4'));
     }
 );
