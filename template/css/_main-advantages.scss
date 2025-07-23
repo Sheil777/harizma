@@ -26,15 +26,19 @@
   font-size: 16px;
   line-height: 24px;
   /* or 150% */
+
   letter-spacing: 0.03em;
+
   color: #FFFFFF;
 }
 
 .main-advantage-item__hyphen {
   width: 34px;
   height: 2px;
+
   margin-left: 18px;
   margin-right: 37px;
+
   background-color: rgba(255, 198, 25, 0.3);
 }
 
@@ -48,13 +52,14 @@
   }
 
   .main-advantage-item:nth-child(3) {
-    order: 4;
+    order: 4
   }
 
   .main-advantage-item:nth-child(4) {
-    order: 3;
+    order: 3
   }
 }
+
 @media (max-width: 700px) {
   .main-advantage-item {
     flex-wrap: wrap;
@@ -68,11 +73,13 @@
     width: 10vw;
   }
 
+  .main-advantage-item__hyphen {
+
+  }
+
   .main-advantage-item__text {
     flex: 1 100%;
     font-size: 4vw;
     line-height: 6vw;
   }
 }
-
-/*# sourceMappingURL=main-advantages.css.map */

@@ -164,14 +164,28 @@ let hallsSlider = new Swiper('.main-slider__container',{
       prevEl: ".halls-move__last",
     },
 
+    lazy: {
+        enabled: true, // Включить lazy loading
+        loadPrevNext: true, // Предзагружать предыдущий и следующий слайд
+        loadOnTransitionStart: true, // Начинать загрузку при переходе
+    },
+    watchSlidesProgress: true, // Важно для lazy loading
+    watchSlidesVisibility: true, // Важно для lazy loading
+
     // Миниатюры
     thumbs: {
         swiper: {
             observer: true,
             el: '.min-slider__container',
             slidesPerView: 5,
-        }
 
+            lazy: {
+                enabled: true,
+                loadPrevNext: 2, // Предзагружать +2/-2 слайда от видимых
+            },
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+        }
     }
 });
 

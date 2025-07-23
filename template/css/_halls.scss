@@ -1,0 +1,534 @@
+.halls {
+  background: rgb(19,21,23);
+  min-height: 1000px; //100vh;
+}
+
+.halls__background {
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 0;
+  }
+
+  @media (max-width: 1850px) {
+    & {
+      right: -120px;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    & {
+      right: -240px;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    & {
+      right: -225px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    & {
+      right: -265px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    & {
+      right: -265px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    & {
+      right: -33vw;
+    }
+  }
+}
+
+.halls {
+
+  &__container {
+
+    position: relative;
+    z-index: 1;
+
+    padding: 0;
+    padding-left: 50px;
+    padding-top: 110px;
+    max-width: 1920px;
+    //min-width: 0;
+  }
+
+  &__header, &__text, &__list, &__move, &__button {
+    width: 460px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__header {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 82px;
+    /* or 109% */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+
+    color: #FFFFFF;
+    white-space: nowrap;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 48px;
+    /* or 200% */
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    width: 432px;
+  }
+
+  &__list {
+    color: white;
+  }
+
+  &__slider {
+    position: absolute;
+    top: 0;
+    //left: 510px;
+    padding-left: 460px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__main-slider {
+    height: 830px;
+  }
+
+  &__characteristics {
+    color: white;
+    margin-top: 35px;
+
+    .halls-characteristics__item {
+      display: flex;
+      align-items: center;
+
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+
+      color: #FFFFFF;
+
+      width: 325px;
+      height: 40px;
+
+      margin-top: 11px;
+
+      img {
+        margin: 0 12px;
+      }
+
+      &_first {
+        background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 35%);
+      }
+
+      &_second {
+        background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 45%);
+      }
+
+      &_third {
+        background: linear-gradient(91.17deg, rgba(246, 144, 32, 0.24) -0.24%, rgba(246, 144, 32, 0) 85%);
+      }
+
+    }
+  }
+
+  &__move {
+    margin-top: 80px;
+
+  }
+
+  &__button {
+    margin-top: 60px;
+    width: 277px;
+    height: 70px;
+  }
+}
+
+.halls-list {
+  width: 420px;
+  margin-top: 60px;
+
+  &__container {
+
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #606571;
+
+    // margin-right: 40px;
+    margin-top: 40px; //100px;
+
+    &.active {
+      color: #FFC619;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Основной слайдер
+.main-slider {
+  overflow: hidden;
+
+  &__container {
+    height: inherit;
+
+  }
+
+  &__wrapper {
+    //display: flex;
+    white-space: nowrap;
+    min-width: 0;
+    height: inherit;
+    font-size: 0;
+  }
+
+  &__slide {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// Уменьшенный слайдер
+.min-slider {
+  width: 100%;
+  height: 172px;
+  overflow: hidden;
+
+  &__container {
+    height: inherit;
+  }
+
+  &__wrapper {
+    height: inherit;
+    min-width: 0;
+    display: flex;
+  }
+
+  &__slide {
+    //flex-grow: 1;
+    flex: 0 0 20%;
+    height: inherit;
+    width: 100px;
+    position: relative;
+    opacity: 0.2;
+    transition: opacity 0.3s ease 0s;
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    &:after {
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      transition: 0.2s;
+    }
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+
+      &:after {
+        background: rgba(255, 198, 25, 0.4);
+        content: url("../img/halls/eye.png");
+      }
+    }
+  }
+
+  &__image {
+    height: inherit;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      //object-position: center;
+    }
+  }
+}
+
+// Adaptive
+// 1700 1400 1000 900
+
+$hallsPercent1500: 70 / 100;
+
+@media (max-width: 1500px) {
+  .halls {
+    &__slider {
+      padding-left: 340px;
+    }
+
+    &__header {
+      font-size: 56px;
+      margin-bottom: 70px * $hallsPercent1500;
+    }
+
+    &__text {
+      width: 432px * $hallsPercent1500;
+      font-size: 24px * $hallsPercent1500;
+      line-height: 48px * $hallsPercent1500;
+    }
+  }
+
+  .halls-list {
+    width: 300px;
+    //font-size: 13px;
+    margin-top: 30px;
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      margin-right: 10px;
+    }
+  };
+}
+
+
+@media (max-width: 1200px) {
+  .halls {
+    padding-bottom: 30px;
+
+    &__container {
+      margin-right: 50px;
+    }
+
+    &__slider {
+      position: static;
+      padding-left: 0;
+    }
+
+    &__header {
+      font-size: 75px;
+      margin-bottom: 70px * $hallsPercent1500;
+    }
+
+    &__text {
+      width: 432px;
+      font-size: 24px;
+      line-height: 48px;
+    }
+
+    &__move {
+      width: auto;
+      margin-top: -142px;
+      justify-content: right;
+      margin-right: 16px;
+    }
+
+    &__button {
+      margin-left: auto;
+      margin-top: 30px;
+    }
+  }
+
+  .halls-list {
+    width: 70%;
+    //font-size: 13px;
+    margin: 30px auto;
+
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+
+    &__text {
+      margin-right: 10px;
+    }
+  }
+
+  // Основной слайд сохраняет пропорции
+  .main-slider {
+    height: 50vw;
+  }
+
+  // Миниатюры сохраняют свои пропорции
+  .min-slider {
+    height: auto;
+  }
+
+  .min-slider__slide {
+    height: auto;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 60%;
+    }
+  }
+
+  .min-slider__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .halls {
+    padding-top: 15vw;
+    //padding-bottom: 0;
+    min-height: unset;
+    overflow: hidden;
+
+    &__container {
+      margin-right: 0;
+    }
+
+    &__header {
+      font-size: 10vw;
+      margin-bottom: 4vw;
+    }
+
+    &__text {
+      width: auto;
+      font-size: 5.5vw;
+      margin-top: 6vw;
+      line-height: 8vw;
+    }
+
+    &__slider {
+      margin-left: -3vw;
+      width: 106vw;
+
+    }
+
+    &__main-slider {
+      height: 70vw;
+    }
+
+    &__move {
+      margin-top: 5vw;
+      justify-content: start;
+    }
+
+    &__button {
+      margin-left: 0;
+      margin-top: 5vw;
+      width: 55vw;
+      height: 13vw;
+      font-size: 3vw;
+      line-height: 0;
+    }
+
+  }
+
+  /*
+  .halls-move {
+    &__last, &__next {
+      width: 13vw !important;
+      height: 13vw !important;
+
+    }
+
+    &__number {
+      font-size: 4vw;
+      width: 22vw !important;
+
+      span b {
+        font-size: 5vw !important;
+      }
+    }
+  }
+*/
+
+  .halls-list {
+    width: 100%;
+
+    &__text {
+      font-size: 4vw;
+      margin-right: 4vw;
+      line-height: 2vw;
+      margin-top: 7vw;
+    }
+  }
+
+  .halls-characteristics {
+    &__item {
+      height: 9vw !important;
+      font-size: 4vw !important;
+
+      img {
+        width: 5vw;
+        margin: 0 2vw !important;
+      }
+    }
+  }
+
+  .min-slider__slide {
+    &:after {
+      display: none;
+    }
+  }
+}

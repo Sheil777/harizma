@@ -1,0 +1,286 @@
+.telegram {
+  min-height: 1000px;
+}
+
+.telegram__background {
+  position: relative;
+  z-index: -1;
+
+  img {
+    position: absolute;
+    right: -1px;
+  }
+
+  @media (max-width: 1850px) {
+    & {
+      right: -120px;
+    }
+  }
+
+  @media (max-width: 1600px) {
+    & {
+      right: -240px;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    & {
+      right: -225px;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    & {
+      right: -265px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    & {
+      right: -265px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    & {
+      right: -33vw;
+    }
+  }
+}
+
+.telegram {
+  &__header {
+    font-weight: 900;
+    // font-size: 75px;
+    @include adaptive-font(75, 15);
+    line-height: 82px;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+
+    padding-top: 110px;
+  }
+
+  &__text {
+    font-weight: 400;
+    // font-size: 24px;
+    @include adaptive-font(24, 10);
+    line-height: 48px;
+
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    margin-top: 45px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__pagination {
+    position: absolute;
+    top: 215px;
+    right: 52px;
+  }
+}
+
+.telegram-slider {
+  margin-top: 55px;
+
+  &__background {
+    position: relative;
+
+    img {
+      position: absolute;
+      left: -17px;
+      top: -16px;
+    }
+  }
+
+  &__container {
+    width: 252px;
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+
+  &__slide.swiper-slide-prev, &__slide.swiper-slide-active, &__slide.swiper-slide-next {
+    opacity: 1;
+  }
+}
+
+.telegram-slide {
+  position: relative;
+  width: 252px;
+
+  &__number {
+    opacity: 0;
+    transition: all 0.1s;
+
+    position: absolute;
+    top: -32px;
+    right: -32px;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #F69020;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+
+    padding-top: 7px;
+    box-sizing: border-box;
+  }
+
+  .swiper-slide-active &__number {
+    opacity: 1;
+  }
+
+  &__img {
+    position: relative;
+    height: 475px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 140px;
+      height: 34px;
+      background: black;
+      border-radius: 17px;
+
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 35px;
+  }
+  &__icon {
+
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+    width: 200px;
+
+
+
+    span {
+      color: #F69020;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .telegram {
+    &__pagination {
+      position: static !important;
+      margin: 50px 0;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .telegram {
+    min-height: auto;
+
+    &__header {
+      font-size: 9vw;
+      line-height: 11vw;
+      padding-top: 15vw;
+    }
+
+    &__text {
+      font-size: 5vw;
+      margin-top: 8vw;
+      line-height: 9vw;
+    }
+
+    &__pagination {
+      margin: 10vw 0;
+    }
+  }
+
+  .telegram-slider {
+    margin-top: 15vw;
+
+    &__container {
+      // width: 50vw;
+      width: 44.5vw;
+    }
+
+    &__slide {
+      //margin-right: 5.1vw;
+    }
+
+    &__background {
+      img {
+        width: 50vw;
+        left: -2.8vw;
+        top: -2.4vw;
+      }
+    }
+  }
+
+  .telegram-slide {
+    width: 50vw !important;
+
+    &__img {
+      height: auto;
+      border-radius: 5vw;
+
+      img {
+        width: 44.5vw;
+      }
+    }
+
+    &__caption {
+      font-size: 3vw;
+      margin-top: 6vw;
+    }
+
+    &__icon {
+      img {
+        width: 8vw;
+      }
+    }
+
+    &__text {
+      font-size: 3vw;
+      width: 34vw;
+      line-height: 4vw;
+    }
+
+  }
+}
